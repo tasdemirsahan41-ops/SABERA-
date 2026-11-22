@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0b1020"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/dashboard.css"><title>Panel · Saber AI</title></head><body data-theme="dark" class="page">
+<header><a href="index.html" aria-label="Sohbete dön">←</a><b>Saber AI paneli</b><a id="adminLink" href="admin.html" hidden style="margin-left:auto">Yönetici</a></header>
+<div class="tabs"><button data-t="keys">API Key</button><button data-t="models">Modeller</button><button data-t="usage">Kullanım</button><button data-t="account">Ayarlar</button></div>
+<main class="wrap">
+<section id="keys" class="tab"><div class="card"><h3>API Key merkezi</h3><p class="note">Tam anahtar yalnızca oluşturulduğunda bir kez gösterilir; sunucuda yalnızca hash'i saklanır. Anahtarlar 90 gün geçerlidir.</p>
+<div class="row"><button id="mk" class="btn pri">Yeni anahtar üret</button></div>
+<div id="fresh" class="card" hidden><p class="note ok">Yeni anahtarın. Şimdi kopyala, tekrar gösterilmeyecek:</p><code id="freshKey"></code><div class="row"><button id="cpKey" class="btn">Kopyala</button></div></div>
+<p id="kMsg" class="note" role="status"></p><div id="keyList"></div></div>
+<div class="card"><h3>Anahtar doğrula</h3><input id="vk" placeholder="sk-saber-…" autocomplete="off"><div class="row"><button id="vBtn" class="btn">Doğrula</button></div><p id="vMsg" class="note"></p></div></section>
+<section id="models" class="tab" hidden><div class="card"><h3>Model ayarları</h3><p class="note">Varsayılan modeli seç, bağlantıyı test et.</p><div id="modelList"></div><p id="mMsg" class="note"></p></div></section>
+<section id="usage" class="tab" hidden><div class="card"><h3>Kullanım</h3><div id="stats" class="stats"></div><p id="usedModels" class="note"></p><div class="scroll"><table id="hist"></table></div></div></section>
+<section id="account" class="tab" hidden><div class="card"><h3>Hesap ve tema</h3><p id="acc" class="note"></p><div class="row"><button class="btn th" data-th="dark">Koyu</button><button class="btn th" data-th="light">Açık</button><button id="out" class="btn danger">Çıkış yap</button></div></div></section>
+</main><script src="js/api.js"></script><script src="js/models.js"></script><script src="js/settings.js"></script><script src="js/dashboard.js"></script></body></html>

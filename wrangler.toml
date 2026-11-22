@@ -1,0 +1,14 @@
+name = "saber-ai"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "."
+
+[vars]
+ADMIN_EMAIL = "BURAYA_YONETICI_E_POSTASI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "saber-ai"
+database_id = "BURAYA_D1_DATABASE_ID"
+
+[ai]
+binding = "AI"

@@ -1,0 +1,8 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0b1020"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/dashboard.css"><title>Yönetici · Saber AI</title></head><body data-theme="dark" class="page">
+<header><a href="index.html" aria-label="Sohbete dön">←</a><b>Yönetici paneli</b></header>
+<main class="wrap">
+<div class="card"><h3>Sistem durumu</h3><div id="sys" class="stats"></div></div>
+<div class="card"><h3>Ayarlar</h3><label>Yeni kullanıcılar için günlük limit<input id="dl" type="number" min="1" max="100000"></label><label>Etkin modeller</label><div id="am"></div><div class="row"><button id="saveSet" class="btn pri">Kaydet</button></div><p id="sMsg" class="note" role="status"></p></div>
+<div class="card"><h3>Kullanıcılar</h3><div class="scroll"><table id="ut"></table></div></div>
+<div class="card"><h3>Son hatalar</h3><div id="errs"></div></div>
+</main><script src="js/api.js"></script><script src="js/admin.js"></script><script>try{document.body.dataset.theme=localStorage.getItem('saber:theme')||'dark'}catch(e){}</script></body></html>
